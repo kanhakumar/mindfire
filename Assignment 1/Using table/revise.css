@@ -1,0 +1,83 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url("https://i.pinimg.com/236x/17/df/db/17dfdbcae8c080ea72041a2588ca5c50.jpg");
+    background-color: aquamarine;
+    color: white;
+}
+legend{
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    font-size: 22px;
+    padding: 14px 25px;
+    border: 2px solid white;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 0 15px black;
+}
+fieldset{
+    border: 2px solid white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0 0 15px black;
+}
+table{
+    width: 100%;
+}
+td{
+    font-size: 18px;
+    padding: 4px;
+}
+input[type='text'],
+input[type='date'],
+input[type='month'],
+input[type='number'],
+input[type='time'],
+input[type='email']{
+    font-size: 16px;
+    height: 32px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+}
+textarea{
+    outline:none;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+}
+#about{
+    width: 600px;
+}
+input[type='text']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='number']:focus,
+input[type='time']:focus,
+input[type='email']:focus,
+textarea:focus{
+    background-color: #dd9c89;
+    box-shadow: 0 0 4px darkred;
+}
+.button{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    background-color: #460c14;
+    outline: none;
+    border: 2px solid white;
+    font-size: 24px;
+    border-radius: 10px;
+}
+.button:hover{
+    box-shadow: 0 0 10px whitesmoke;
+    cursor: pointer;
+}
