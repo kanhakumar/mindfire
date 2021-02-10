@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Student Registration Form</title>
+    <script>
+        function submitFunction() {
+            var name = document.getElementById("first_name").value;
+            var str = "Submitted successfully by ";
+            var dis = str.concat(name,"!");
+            alert(dis);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Student Registration Form</h3>
+        <div class="container">
+            <form class="col s12" onsubmit="submitFunction()">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" placeholder="First Name" type="text" class="validate" required>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" placeholder="Last Name" type="text" class="validate" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="father_name" placeholder="Father's Name" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="mother_name" placeholder="Mother's Name" type="text" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="dob" type="date" class="validate" max="2003-02-10" min="1993-01-01"> 
+                            <label for="dob">Date of Birth</label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:auto;">
+                        <span>Gender:<br></span>
+                        <label>
+                            <input class="with-gap" name="gender" type="radio" value="male" />
+                            <span>Male</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="gender" type="radio" value="female" />
+                            <span>Female</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="gender" type="radio" value="other" />
+                            <span>Others</span>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="number" placeholder="Aadhaar Number" id="aadhaar">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Education Details</legend>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="school_10" placeholder="10th School Name" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="board_10" type="text" placeholder="Board Name" class="validate">
+                        </div>
+                        <div class="input-field col s2">
+                            <input id="passing_year_10" type="number" placeholder="Passing Year" class="validate">
+                        </div>
+                        <div class="input-field col s2">
+                            <input id="percentage_10" type="number"  placeholder="Marks in %" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="school_12" type="text" class="validate">
+                            <label for="school_12">12th School Name</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="board_12" type="text" class="validate">
+                            <label for="board_12">Board Name</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input id="passing_year_12" type="number" class="validate">
+                            <label for="passing_year_12">Passing Year</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input id="percentage_12" type="number" class="validate">
+                            <label for="percentage_12">Marks in %</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="address1" type="text" placeholder="Address Line 1" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="address2" type="text" placeholder="Address Line 2" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="city" type="text" placeholder="City" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="state" type="text" placeholder="State" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="zip" type="number" placeholder="Pin Code" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="phone_number" type="number" placeholder="Contact Number" class="validate" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="email" type="email" placeholder="Email Address" class="validate" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
