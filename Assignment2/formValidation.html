@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="formValidation.css">
+</head>
+<body>
+    <div id="form-div">
+        <h3>Register Here!</h3>
+        <form onsubmit="return validate()" action="" name="vform">
+            <div id="username_div">
+               <input type="text" id="username" name="username" class="textInput" placeholder="User Name">
+                <div id="name_error"></div>
+            </div>
+            <div id="email_div">
+                <input type="email" id="email" name="email" class="textInput" placeholder="Email">
+                <div id="email_error"></div>
+            </div>
+            <div id="password_div">
+                <input type="password" id="password" name="password" class="textInput" placeholder="Password">
+            </div>
+            <div id="pass_confirm_div">
+                <input type="password" id="password_confirm" name="password_confirm" class="textInput" placeholder="Confirm Password">
+                <div id="password_error"></div>
+            </div>
+            <div>
+                <input type="submit" name="register" value="Register" class="btn">
+            </div>
+        </form>
+    </div>
+    <script src="formValidation.js"></script>
+</body>
+</html>

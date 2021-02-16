@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search User</title>
+    <script src="searchUser.js"></script>
+    <style>
+        div{
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            font-size: 30px;
+        }
+        input,button{
+            margin-top: 15px;
+            font-size: 20px;
+            border: 2px solid white;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="Enter Name">
+        <button onclick="searchFunction()">Search</button>
+        <button type="reset" onclick="location.reload()">Reset</button>
+    </div>
+    <div>
+        <ul id="display"></ul>
+    </div>
+</body>
+</html>
