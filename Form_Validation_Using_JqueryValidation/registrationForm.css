@@ -1,0 +1,25 @@
+form{
+    
+    padding: 0px;
+}
+button{
+    margin-left: 30%;
+}
+fieldset{
+    padding: 6px;
+}
+div{
+    padding: 8px;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 30%;
+    font-style: italic;
+}
+label.error{
+    display: block;
+    color: red;
+}
+input.error{
+    border: 2px solid red;
+}

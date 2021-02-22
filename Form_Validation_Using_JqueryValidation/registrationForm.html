@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="registrationForm.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h3>Form</h3>
+    <form class="form-inline" id="registrationForm">
+        <fieldset class="container">
+            <div class="row">
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-horizontal col-sm">
+                    <label for="birthdate">Birth Date</label>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate">
+                </div>
+                <div class="radio col-sm">
+                    <label>
+                      <input type="radio" name="gender" id="male" value="m" checked>
+                      Male
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                      <input type="radio" name="gender" id="female" value="f">
+                      Female
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                      <input type="radio" name="gender" id="" value="o">
+                      Others
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="container">
+            <div class="row">
+                <div class="form-group">
+                    <label for="addressLine1">Address line 1</label>
+                    <input type="text" class="form-control" id="addressLine1" name="address">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine2">Address line 2</label>
+                    <input type="text" class="form-control" id="addressLine2">
+                </div>
+                <div class="form-horizontal">
+                    <label>Country</label>
+                    <select class="form-control" id="country" name="country">
+                    
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <select class="form-control" id="state" name="state">
+                    
+                    </select>
+                </div>
+                <div class="form-horizontal">
+                    <label for="pinCode">Pin Code</label>
+                    <input type="number" class="form-control" id="pinCode" name="pincode" >
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="container">
+            <div class="row">
+                <div class="form-group">
+                    <label for="phoneNumber">Telephone</label>
+                    <input type="number" class="form-control" id="phoneNumber" name="phonenumber">
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email</label>
+                    <input type="email" class="form-control" id="emailAddress" name="email">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="container">
+            <div class="row">
+                <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-pwd">Confirm Password</label>
+                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
+                </div>
+            </div>    
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script>
+        $("#registrationForm").validate();
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="registrationForm.js"></script>
+</body>
+</html>
