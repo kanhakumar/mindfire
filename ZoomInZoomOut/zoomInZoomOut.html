@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom In Zoom Out</title>
+    <style>
+        .center {
+            /* width: 400px;
+            height: 400px; */
+            margin: auto;
+            /* box-shadow: 0 0 15px black;
+            border-radius: 15px; */
+            overflow: hidden;
+            text-align: center;
+        }
+        .center img{
+            /* box-shadow: 0 0 15px black;
+            border-radius: 15px; */
+            transition: all 0.5s;
+        }     
+        div{
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        button{
+            margin: 10px;
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+        }     
+    </style>
+</head>
+<body>
+    <div>
+        <button type="button" onclick="zoomIn()">ZoomIn</button>
+        <button type="button" onclick="zoomOut()">ZoomOut</button>
+    </div>
+    <section class="center">
+        <img id="panda" src="https://static.wikia.nocookie.net/character-stats-and-profiles/images/a/af/Image-1.jpg/revision/latest?cb=20200611083502"
+            width="378px" height="400px">
+    </section>
+
+    <script type="text/javascript"> 
+        function zoomIn() { 
+            var zoom = document.getElementById("panda"); 
+            var currWidth = zoom.clientWidth;
+            var currHeight = zoom.clientHeight; 
+            zoom.style.width = (currWidth + 40) + "px";
+            zoom.style.height = (currHeight + 40) + "px";
+        } 
+          
+        function zoomOut() { 
+            var zoom = document.getElementById("panda"); 
+            var currWidth = zoom.clientWidth; 
+            var currHeight = zoom.clientHeight;
+            zoom.style.width = (currWidth - 40) + "px";
+            zoom.style.height = (currHeight - 40) + "px"; 
+        } 
+    </script>  
+</body>
+</html>
