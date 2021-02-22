@@ -79,8 +79,8 @@ $().ready(function(){
             },
             // gender:"required",
             address:"required",
-            country:"required countryCheck",
-            state:"required stateCheck",
+            country:"required",
+            state:"required",
             pincode:"required",
             phonenumber:{
                 required:true
