@@ -6,3 +6,23 @@ body{
     width: 400px;
 }
 
+/* .list{
+    margin-left: 20px;
+} */
+
+.search{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card{
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+.user-name{
+    font-size: large;
+}

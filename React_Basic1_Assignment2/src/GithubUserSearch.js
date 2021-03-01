@@ -4,7 +4,6 @@ import './GithubUserSearch.css'
 export default class GithubUserSearch extends Component {
 
     state = {
-        loading: true,
         userName: "",
         users: []
     }
@@ -17,16 +16,15 @@ export default class GithubUserSearch extends Component {
         this.setState({
             userName: value
         }, () => {
-            if (value.length > 0) {
-                this.displayUser();
-                console.log(value);
-            }
+            this.displayUser();
         })
     }
 
     displayUser = () => {
         if (this.state.userName.length === 0) {
-            this.setState({ users: [] })
+            this.setState({ users: [] },()=>{
+                this.showList();
+            })
         }
         else {
             const url = "https://api.github.com/search/users?q=";
@@ -39,7 +37,13 @@ export default class GithubUserSearch extends Component {
     showList = () => {
         if(this.state.users) {
             return this.state.users.map(user => {
-                return (<div className='col-md-3' key={user.id}>{user.login}</div>);
+                // return (<div className='col-md-3' key={user.id}>{user.login}</div>);
+                return (
+                    <div className="card col-md-3" key={user.id}>
+                        <a href={user.html_url} target='_blank'><img src={user.avatar_url} width='300' height='300'/></a>
+                        <p className='user-name'>{user.login}</p>
+                    </div>
+                );
             })
         }
     }
